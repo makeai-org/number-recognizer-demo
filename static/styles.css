@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: #2F3045;
+    color: #b3c5df;
+}
+
+nav {
+    background-color: #02005F;
+    padding: 0px;
+
+}
+
+img {
+    width: 250px;
+    height: auto;
+    padding: 20px;
+}
+
+label {
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+button {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bold;
+    border: 2px solid #b3c5df;
+    background-color: #323d76;
+    font-size: 32px;
+    border-radius: 8px;
+    color: #b3c5df;
+}
+
+input[type="number"], textarea {
+    vertical-align: middle;
+    background-color: #2F3045;
+    color: #b3c5df;
+    border: 2px solid #b3c5df;
+    border-radius: 8px;
+    height: 32px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Recognizer Demo - MakeAI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" />
+</head>
+<body>
+    <nav>
+        <a href="https://makeai.org" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='logo.webp') }}"></a>
+    </nav>
+
+    <br><br><br><br>
+    <div class="title">
+        <h1>
+            Number Recognizer Demo
+        </h1>
+    </div>
+    <br><br>
+
+    <div class="demo">
+        {% block link %}
+
+        <h1>Using Tensorflow Version {{ version }}</h1>
+        <br><br>
+        <form method="POST" action="{{ url_for('test') }}">
+            <div>
+                <label for="number">Enter which test case to run (0-999):&nbsp;&nbsp;</label>
+                <input type="number" id="number" name="number" style="color: #b3c5df;">
+            </div>
+            <br><br>
+            <div class="submit">
+                <button>Run</button>
+            </div>
+        </form>
+        <br>
+        {% if img %}
+        <br><br>
+        <img src="{{ url_for('static', filename=img) }}" height="280" width="280">
+        <br><br>
+        <body>Prediction: {{ pred }}</body>
+        {% else %}
+        <body>No image chosen</body>
+        {% endif %}
+        <br><br>
+        </body>
+        {% endblock %}
+    </div>
+</body>
+</html>
